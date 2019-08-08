@@ -1,3 +1,42 @@
+<?php
+
+$conn = mysqli_connect("localhost","admin_cursoiot","123456789","admin_cursoiot");
+
+$email = "";
+$password = "";
+$password_r = "";
+$msg = "";
+
+if(isset($_POST['email'])&&isset($_POST['password'])&&isset($_POST['password_r'])){
+
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $password_r=$_POST['password_r'];
+
+  if ($password==$password_r) {
+
+    $result=$conn->query("SELECT * FROM `users`WHERE `user_mail`= '".$email."' ");
+    $users = $result->fetch_all(MYSQLI_ASSOC);
+
+    $count = count($users);
+    if ($count == 0) {
+      $password=sha1($password);
+      $conn->query("INSERT INTO `users` (`users_email`,`users_password`) VALUES ('".$email."','".$password."');");
+      $msg="Usuario creado correctamente, ingrese aqui <a href='login.php'>click aqui</a><br>";
+    }else{
+      $msg.="El email ingresado yya existe <br>";
+    }
+  } else{
+    $msg="Las claves no coinciden"
+  }
+
+} else{
+  $msg="Complete el formulario!!"
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +88,7 @@
           <label>Name</label>
         </div>
         <div class="md-form-group">
-          <input type="email" class="md-input" required>
+          <input type="email" class="md-input" value="<?php echo $email; ?>" required>
           <label>Email</label>
         </div>
         <div class="md-form-group">
