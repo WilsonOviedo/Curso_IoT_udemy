@@ -17,16 +17,16 @@
   <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
   
   <!-- style -->
-  <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="../assets/glyphicons/glyphicons.css" type="text/css" />
-  <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="../assets/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/material-design-icons/material-design-icons.css" type="text/css" />
 
-  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
   <!-- build:css ../assets/styles/app.min.css -->
-  <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="assets/styles/app.css" type="text/css" />
   <!-- endbuild -->
-  <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
+  <link rel="stylesheet" href="assets/styles/font.css" type="text/css" />
 </head>
 <body>
   <div class="app" id="app">
@@ -35,7 +35,7 @@
   <div class="center-block w-xxl w-auto-xs p-y-md">
     <div class="navbar">
       <div class="pull-center">
-        <div ui-include="'../views/blocks/navbar.brand.html'"></div>
+        <div ui-include="'views/blocks/navbar.brand.html'"></div>
       </div>
     </div>
     <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
@@ -71,14 +71,14 @@
   </div>
 <!-- build:js scripts/app.html.js -->
 <!-- jQuery -->
-  <script src="../libs/jquery/jquery/dist/jquery.js"></script>
+  <script src="libs/jquery/jquery/dist/jquery.js"></script>
 <!-- Bootstrap -->
-  <script src="../libs/jquery/tether/dist/js/tether.min.js"></script>
-  <script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="libs/jquery/tether/dist/js/tether.min.js"></script>
+  <script src="libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
 <!-- core -->
-  <script src="../libs/jquery/underscore/underscore-min.js"></script>
-  <script src="../libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
-  <script src="../libs/jquery/PACE/pace.min.js"></script>
+  <script src="libs/jquery/underscore/underscore-min.js"></script>
+  <script src="libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/jquery/PACE/pace.min.js"></script>
 
   <script src="scripts/config.lazyload.js"></script>
 
@@ -96,7 +96,7 @@
   <script src="scripts/app.js"></script>
 
   <!-- ajax -->
-  <script src="../libs/jquery/jquery-pjax/jquery.pjax.js"></script>
+  <script src="libs/jquery/jquery-pjax/jquery.pjax.js"></script>
   <script src="scripts/ajax.js"></script>
 <!-- endbuild -->
 </body>
