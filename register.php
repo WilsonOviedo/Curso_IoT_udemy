@@ -27,11 +27,11 @@ if(isset($_POST['email'])&&isset($_POST['password'])&&isset($_POST['password_r']
       $msg.="El email ingresado yya existe <br>";
     }
   } else{
-    $msg="Las claves no coinciden"
+    $msg="Las claves no coinciden";
   }
 
 } else{
-  $msg="Complete el formulario!!"
+  $msg="Complete el formulario!!";
 }
 
 
