@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","admin_cursoiot","123456789","admin_cursoiot");
+$conn = mysqli_connect("localhost","admin_cursoiot","121212","admin_cursoiot");
 
 $email = "";
 $password = "";
