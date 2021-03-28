@@ -15,7 +15,7 @@ if(isset($_POST['email'])&&isset($_POST['password'])&&isset($_POST['password_r']
 
   if ($password==$password_r) {
 
-    $result=$conn->query("SELECT * FROM `users`WHERE `user_mail`= '".$email."' ");
+    $result=$conn->query("SELECT * FROM `users`WHERE `users_mail`= '".$email."' ");
     $users = $result->fetch_all(MYSQLI_ASSOC);
 
     $count = count($users);
