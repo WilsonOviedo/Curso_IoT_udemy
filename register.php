@@ -24,7 +24,7 @@ if(isset($_POST['email'])&&isset($_POST['password'])&&isset($_POST['password_r']
       $conn->query("INSERT INTO `users` (`users_email`,`users_password`) VALUES ('".$email."','".$password."');");
       $msg="Usuario creado correctamente, ingrese aqui <a href='login.php'>click aqui</a><br>";
     }else{
-      $msg.="El email ingresado yya existe <br>";
+      $msg.="El email ingresado ya existe <br>";
     }
   } else{
     $msg="Las claves no coinciden";
@@ -82,30 +82,35 @@ if(isset($_POST['email'])&&isset($_POST['password'])&&isset($_POST['password_r']
       <div class="m-b text-sm">
         Sign up to your Flatkit Account
       </div>
-      <form name="form">
+      <form method="post" target="register.php" name="form">
+        
         <div class="md-form-group">
-          <input type="text" class="md-input" required>
-          <label>Name</label>
-        </div>
-        <div class="md-form-group">
-          <input type="email" class="md-input" value="<?php echo $email; ?>" required>
+          <input name="email" type="email" class="md-input" value="<?php echo $email; ?>" required>
           <label>Email</label>
         </div>
+
         <div class="md-form-group">
           <input type="password" class="md-input" required>
           <label>Password</label>
         </div>
+
+        <div class="md-form-group">
+          <input name="password_r" type="password" class="md-input" required>
+          <label>Password repite</label>
+        </div>
+
         <div class="m-b-md">
           <label class="md-check">
             <input type="checkbox" required><i class="primary"></i> Agree the <a href>terms and policy</a>
           </label>
         </div>
+
         <button type="submit" class="btn primary btn-block p-x-md">Sign up</button>
       </form>
     </div>
 
     <div class="p-v-lg text-center">
-      <div>Already have an account? <a ui-sref="access.signin" href="signin.html" class="text-primary _600">Sign in</a></div>
+      <div>Already have an account? <a ui-sref="access.signin" href="login.php" class="text-primary _600">Sign in</a></div>
     </div>
   </div>
 
